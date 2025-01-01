@@ -1,12 +1,11 @@
 local colors = {
 	background = "#1a1a1a",
-	foreground = "#dcd7ba",
-	black = "#131313",
+	foreground = "#727169",
 	blue = "#7e9cd8",
 	cyan = "#6a9589",
 	red = "#c34043",
 	violet = "#938aa9",
-	grey = "#727169",
+	grey = "#2a2a2a",
 	green = "#76946a",
 	yellow = "#c0a36e",
 }
@@ -14,11 +13,11 @@ local colors = {
 local kanagawa_theme = {
 	normal = {
 		a = { fg = colors.background, bg = colors.violet },
-		b = { fg = colors.grey, bg = colors.background },
-		c = { fg = colors.grey, bg = colors.background },
-		x = { fg = colors.grey, bg = colors.background },
-		y = { fg = colors.grey, bg = colors.background },
-		z = { fg = colors.grey, bg = colors.background },
+		b = { fg = colors.foreground, bg = colors.grey },
+		c = { fg = colors.foreground, bg = colors.background },
+		x = { fg = colors.foreground, bg = colors.background },
+		y = { fg = colors.foreground, bg = colors.background },
+		z = { fg = colors.foreground, bg = colors.background },
 	},
 
 	insert = { a = { fg = colors.background, bg = colors.blue } },
