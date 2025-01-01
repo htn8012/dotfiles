@@ -27,8 +27,7 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
-vim.opt.statusline = " %f %h%m%r %= %y %3p%% %3l:%-2c"
-vim.opt.laststatus = 3
+vim.opt.laststatus = 2
 
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 10

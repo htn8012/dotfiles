@@ -17,22 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = {
 		{
-			require("plugins.blink"),
-			require("plugins.comment"),
-			require("plugins.conform"),
-			require("plugins.dressing"),
-			require("plugins.fzf"),
-			require("plugins.git"),
-			require("plugins.kanagawa"),
-			require("plugins.lazydev"),
-			require("plugins.leap"),
-			require("plugins.mini-icons"),
-			require("plugins.neoscroll"),
-			require("plugins.nvim-lspconfig"),
-			require("plugins.nvim-treesitter"),
-			require("plugins.oil"),
-			require("plugins.tmux-navigator"),
-			require("plugins.which-key"),
+			{ import = "plugins" },
 		},
 	},
 	performance = {

@@ -37,21 +37,21 @@ return {
 				NormalFloat = { bg = "none" },
 				FloatBorder = { bg = "none" },
 				FloatTitle = { bg = "none" },
-				StatusLine = { fg = theme.syn.comment, bg = "none" },
-				StatusLineNC = { fg = theme.syn.comment, bg = "none" },
+				StatusLine = { fg = theme.ui.fg_dim, bg = "none" },
+				StatusLineNC = { fg = theme.ui.fg_dim, bg = "none" },
 
-				-- pmenu
-				Pmenu = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
-				PmenuSel = { fg = "none", bg = theme.ui.bg_p2 },
-				PmenuSbar = { bg = theme.ui.bg },
-				PmenuThumb = { bg = theme.ui.bg_p2 },
+				-- blink
+				BlinkCmpMenu = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
+				BlinkCmpMenuSelection = { fg = "none", bg = theme.ui.bg_p2 },
+				BlinkCmpDocBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
+				BlinkCmpSignatureHelpBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
+				BlinkCmpMenuBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
 
 				-- border
-				NvimTreeIndentMarker = { fg = theme.ui.float.fg_border },
 				FzfLuaBorder = { fg = theme.ui.float.fg_border },
 				WinSeparator = { fg = theme.ui.float.fg_border },
 
-				LazyNormal = { fg = theme.ui.fg_dim, bg = "none" },
+				LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
 				MasonNormal = { fg = theme.ui.fg_dim, bg = "none" },
 			}
 		end,

@@ -14,7 +14,6 @@ function M.on_attach(_, bufnr)
 		bufopts.desc = "LSP: " .. desc
 		return vim.keymap.set("n", key, func, bufopts)
 	end
-
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "hover" })
 	map("M", vim.diagnostic.open_float, "show line diagnostics")
 	map("gd", vim.lsp.buf.definition, "go to definition")

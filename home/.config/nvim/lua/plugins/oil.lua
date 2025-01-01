@@ -2,7 +2,7 @@ return {
 	"stevearc/oil.nvim",
 	lazy = false,
 	keys = {
-		{ "<leader>n", "<cmd>Oil<cr>", desc = "Oil" },
+		{ "<leader>e", "<cmd>Oil<cr>", desc = "Oil" },
 	},
 	opts = {
 		default_file_explorer = true,
@@ -22,7 +22,6 @@ return {
 			["~"] = { "actions.open_cwd", mode = "n" },
 			["<C-c>"] = { "actions.close", mode = "n" },
 			["q"] = { "actions.close", mode = "n" },
-			["<leader>n"] = { "actions.close", mode = "n" },
 			["<C-r>"] = "actions.refresh",
 			["<BS>"] = { "actions.parent", mode = "n" },
 			["<CR>"] = "actions.select",
