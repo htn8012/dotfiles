@@ -22,9 +22,9 @@ config.font = wezterm.font_with_fallback({
 	"Noto Color Emoji",
 })
 
-config.font_size = 11
+config.font_size = 11.5
 config.cell_width = 1
-config.line_height = 1.1
+config.line_height = 1
 
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = false

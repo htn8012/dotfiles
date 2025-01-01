@@ -15,9 +15,6 @@ local kanagawa_theme = {
 		a = { fg = colors.background, bg = colors.violet },
 		b = { fg = colors.foreground, bg = colors.grey },
 		c = { fg = colors.foreground, bg = colors.background },
-		x = { fg = colors.foreground, bg = colors.background },
-		y = { fg = colors.foreground, bg = colors.background },
-		z = { fg = colors.foreground, bg = colors.background },
 	},
 
 	insert = { a = { fg = colors.background, bg = colors.blue } },
