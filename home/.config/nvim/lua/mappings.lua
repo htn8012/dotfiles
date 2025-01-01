@@ -1,4 +1,3 @@
----@diagnostic disable: missing-fields
 local map = vim.keymap.set
 
 -- better
