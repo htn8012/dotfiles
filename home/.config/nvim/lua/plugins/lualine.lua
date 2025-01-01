@@ -14,8 +14,11 @@ local colors = {
 local kanagawa_theme = {
 	normal = {
 		a = { fg = colors.background, bg = colors.violet },
-		b = { fg = colors.grey, bg = colors.black },
+		b = { fg = colors.grey, bg = colors.background },
 		c = { fg = colors.grey, bg = colors.background },
+		x = { fg = colors.grey, bg = colors.background },
+		y = { fg = colors.grey, bg = colors.background },
+		z = { fg = colors.grey, bg = colors.background },
 	},
 
 	insert = { a = { fg = colors.background, bg = colors.blue } },

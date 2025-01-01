@@ -7,8 +7,8 @@ return {
 		snacks.setup({
 			notifier = {
 				enabled = true,
-				timeout = 2000,
-				-- style = "fancy",
+				timeout = 3000,
+				style = "fancy",
 			},
 
 			indent = {
