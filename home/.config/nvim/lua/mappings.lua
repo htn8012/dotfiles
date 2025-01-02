@@ -20,12 +20,8 @@ vim.keymap.set("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "prev se
 vim.keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "prev search result" })
 
 -- move lines
-vim.keymap.set("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "move down" })
-vim.keymap.set("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "move up" })
-vim.keymap.set("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "move down" })
-vim.keymap.set("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "move up" })
-vim.keymap.set("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "move down" })
-vim.keymap.set("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "move up" })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- keep visual selection when indenting
 vim.keymap.set("x", ">", ">gv")
@@ -37,13 +33,13 @@ vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "next buffer" })
 vim.keymap.set("n", "<leader>bd", ":bdelete<cr>", { desc = "delete buffer" })
 
 -- delete/change/replace without yanking.
-vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Replace without yanking" })
-vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yanking" })
-vim.keymap.set("n", "<leader>D", '"_D', { desc = "Delete until EOL without yanking" })
-vim.keymap.set("n", "<leader>c", '"_c', { desc = "Change without yanking" })
-vim.keymap.set("n", "<leader>C", '"_C', { desc = "Change until EOL without yanking" })
+vim.keymap.set("x", "<leader>p", '"_dP', { desc = "replace without yanking" })
+vim.keymap.set("n", "<leader>d", '"_d', { desc = "delete without yanking" })
+vim.keymap.set("n", "<leader>D", '"_D', { desc = "delete until eol without yanking" })
+vim.keymap.set("n", "<leader>c", '"_c', { desc = "change without yanking" })
+vim.keymap.set("n", "<leader>C", '"_C', { desc = "change until eol without yanking" })
 
 -- using the os clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
-vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste after cursor from clipboard" })
-vim.keymap.set("n", "<leader>P", '"+P', { desc = "Paste before cursor from clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "yank to clipboard" })
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "paste after cursor from clipboard" })
+vim.keymap.set("n", "<leader>P", '"+P', { desc = "paste before cursor from clipboard" })

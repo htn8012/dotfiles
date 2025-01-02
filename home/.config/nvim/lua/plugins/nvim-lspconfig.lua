@@ -24,11 +24,11 @@ local M = {
 function M.on_attach(_, bufnr)
 	local map = function(key, func, desc)
 		local bufopts = { noremap = true, silent = true, buffer = bufnr }
-		bufopts.desc = "LSP: " .. desc
+		bufopts.desc = "lsp " .. desc
 		return vim.keymap.set("n", key, func, bufopts)
 	end
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "hover" })
-	map("M", vim.diagnostic.open_float, "show line diagnostics")
+	map("J", vim.diagnostic.open_float, "show line diagnostics")
 	map("gd", vim.lsp.buf.definition, "go to definition")
 	map("gi", vim.lsp.buf.implementation, "go to implementation")
 	map("gr", vim.lsp.buf.references, "go to references")
