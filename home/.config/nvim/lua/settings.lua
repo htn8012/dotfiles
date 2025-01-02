@@ -1,6 +1,10 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.opt.mouse = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -37,9 +41,6 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 vim.opt.autowrite = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.clipboard = "unnamedplus"
@@ -73,4 +74,4 @@ vim.cmd([[
     autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu		| set cul		| endif
     autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | set nocul		| endif
   augroup END
-]]) -- h/t https://jeffkreeftmeijer.com/vim-number/
+]])

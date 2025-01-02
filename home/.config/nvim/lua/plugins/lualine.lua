@@ -29,6 +29,7 @@ local kanagawa_theme = {
 }
 return {
 	"nvim-lualine/lualine.nvim",
+	enabled = false,
 	dependencies = {
 		"echasnovski/mini.icons",
 	},

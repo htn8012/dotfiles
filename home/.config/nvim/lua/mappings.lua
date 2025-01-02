@@ -10,7 +10,7 @@ map({ "n", "x" }, "H", "^")
 map({ "n", "x" }, "L", "$")
 
 -- save and quit
-map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+map({ "n", "v", "i" }, "<C-S>", "<C-c>:update<cr>", { silent = true, desc = "Save" })
 map("n", "<leader>q", ":q<cr>", { desc = "quit" })
 
 -- keep matches center screen when cycling with n|n

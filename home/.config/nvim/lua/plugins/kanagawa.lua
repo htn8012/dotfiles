@@ -37,8 +37,8 @@ return {
 				NormalFloat = { bg = "none" },
 				FloatBorder = { bg = "none" },
 				FloatTitle = { bg = "none" },
-				StatusLine = { fg = theme.ui.fg_dim, bg = "none" },
-				StatusLineNC = { fg = theme.ui.fg_dim, bg = "none" },
+				StatusLine = { fg = theme.syn.comment, bg = "none" },
+				StatusLineNC = { fg = theme.syn.comment, bg = "none" },
 
 				-- blink
 				BlinkCmpMenu = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
