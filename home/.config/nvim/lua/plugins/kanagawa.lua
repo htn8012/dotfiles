@@ -50,6 +50,7 @@ return {
 				-- border
 				FzfLuaBorder = { fg = theme.ui.float.fg_border },
 				WinSeparator = { fg = theme.ui.float.fg_border },
+				NeoTreeRootName = { fg = theme.syn.comment },
 
 				LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
 				MasonNormal = { fg = theme.ui.fg_dim, bg = "none" },

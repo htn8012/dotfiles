@@ -7,7 +7,7 @@ return {
 	},
 	cmd = "Neotree",
 	keys = {
-		{ "<leader>n", ":Neotree toggle float reveal<CR>", silent = true, desc = "Float File Explorer" },
+		{ "<leader>fe", ":Neotree toggle float reveal<CR>", silent = true, desc = "Float File Explorer" },
 	},
 	deactivate = function()
 		vim.cmd([[Neotree close]])
