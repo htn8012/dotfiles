@@ -31,8 +31,8 @@ config.enable_tab_bar = false
 config.tab_bar_at_bottom = false
 
 config.window_close_confirmation = "NeverPrompt"
--- config.window_decorations = "TITLE | RESIZE"
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
+
 config.window_padding = {
 	left = 0,
 	right = 0,
