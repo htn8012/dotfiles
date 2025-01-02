@@ -56,8 +56,8 @@ return {
 				MasonNormal = { fg = theme.ui.fg_dim, bg = "none" },
 			}
 		end,
-		theme = "wave", -- Load "wave" theme when 'background' option is not set
-		background = { -- map the value of 'background' option to a theme
+		theme = "wave",
+		background = {
 			dark = "wave", -- try "dragon" !
 			light = "lotus",
 		},

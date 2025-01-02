@@ -16,7 +16,7 @@ return {
 		local snacks = require("snacks")
 		snacks.setup({
 			notifier = {
-				enabled = false,
+				enabled = true,
 				timeout = 3000,
 				style = "fancy",
 			},
