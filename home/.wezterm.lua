@@ -46,7 +46,7 @@ wezterm.on("gui-startup", function()
 end)
 
 config.audible_bell = "Disabled"
-config.enable_wayland = false
+config.enable_wayland = true
 config.warn_about_missing_glyphs = false
 -- config.native_macos_fullscreen_mode = true
 

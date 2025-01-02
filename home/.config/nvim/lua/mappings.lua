@@ -36,9 +36,14 @@ vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "prev buffer" }
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "next buffer" })
 vim.keymap.set("n", "<leader>bd", ":bdelete<cr>", { desc = "delete buffer" })
 
--- without yanking
-vim.keymap.set("n", "c", '"_c')
-vim.keymap.set("n", "C", '"_C')
-vim.keymap.set("n", "cc", '"_cc')
-vim.keymap.set("x", "c", '"_c')
-vim.keymap.set("x", "p", '"_c<esc>p')
+-- delete/change/replace without yanking.
+vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Replace without yanking" })
+vim.keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yanking" })
+vim.keymap.set("n", "<leader>D", '"_D', { desc = "Delete until EOL without yanking" })
+vim.keymap.set("n", "<leader>c", '"_c', { desc = "Change without yanking" })
+vim.keymap.set("n", "<leader>C", '"_C', { desc = "Change until EOL without yanking" })
+
+-- using the os clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste after cursor from clipboard" })
+vim.keymap.set("n", "<leader>P", '"+P', { desc = "Paste before cursor from clipboard" })

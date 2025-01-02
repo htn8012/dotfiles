@@ -1,15 +1,13 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.opt.clipboard = ""
-
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
