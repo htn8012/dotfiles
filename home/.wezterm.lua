@@ -47,7 +47,6 @@ end)
 
 config.audible_bell = "Disabled"
 config.enable_wayland = true
-config.warn_about_missing_glyphs = false
--- config.native_macos_fullscreen_mode = true
+config.warn_about_missing_glyphs = true
 
 return config
