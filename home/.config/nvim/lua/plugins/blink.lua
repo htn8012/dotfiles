@@ -1,6 +1,11 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = { "l3mon4d3/luasnip", version = "v2.*" },
+	enabled = true,
+	dependencies = {
+		"L3MON4D3/LuaSnip",
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		build = "make install_jsregexp",
+	},
 	version = "*",
 	opts = {
 		keymap = {
@@ -46,7 +51,7 @@ return {
 			end,
 		},
 		sources = {
-			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+			default = { "lazydev", "lsp", "path", "luasnip", "buffer" },
 			providers = {
 				lazydev = {
 					name = "LazyDev",
