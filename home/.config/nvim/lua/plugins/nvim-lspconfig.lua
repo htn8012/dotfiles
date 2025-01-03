@@ -48,15 +48,7 @@ end
 function M.config()
 	local lspconfig = require("lspconfig")
 	local mason_lspconfig = require("mason-lspconfig")
-	local capabilities = require("blink.cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
-	capabilities.textDocument.completion.completionItem.snippetSupport = true
-	capabilities.textDocument.foldingRange = {
-		dynamicRegistration = false,
-		lineFoldingOnly = true,
-	}
-	vim.diagnostic.config({
-		virtual_text = false,
-	})
+	local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 	-- Diagnostics symbols for display in the sign column.
 	local signs = { Error = "", Warn = "", Hint = "", Info = "" }
@@ -113,20 +105,13 @@ function M.config()
 		function(server_name) -- default handler (optional)
 			lspconfig[server_name].setup({
 				on_attach = M.on_attach,
-				capabilities,
-			})
-		end,
-		["html"] = function()
-			lspconfig.html.setup({
-				on_attach = M.on_attach,
-				capabilities,
-				filetypes = { "html" },
+				capabilities = capabilities,
 			})
 		end,
 		["jsonls"] = function()
 			lspconfig.jsonls.setup({
 				on_attach = M.on_attach,
-				capabilities,
+				capabilities = capabilities,
 				commands = {
 					Format = {
 						function()
@@ -139,7 +124,7 @@ function M.config()
 		["tailwindcss"] = function()
 			lspconfig.tailwindcss.setup({
 				on_attach = M.on_attach,
-				capabilities,
+				capabilities = capabilities,
 				settings = {
 					tailwindCSS = {
 						classAttributes = { "class", "className", "class:list", "classList", "ngClass" },

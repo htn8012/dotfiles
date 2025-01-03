@@ -1,11 +1,6 @@
 return {
 	"saghen/blink.cmp",
-	enabled = true,
-	dependencies = {
-		"L3MON4D3/LuaSnip",
-		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-		build = "make install_jsregexp",
-	},
+	dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
 	version = "*",
 	opts = {
 		keymap = {
@@ -17,10 +12,7 @@ return {
 			menu = {
 				border = "rounded",
 				draw = {
-					columns = {
-						{ "label", "label_description", gap = 1 },
-						{ "kind_icon", "kind", gap = 1 },
-					},
+					columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
 				},
 			},
 			documentation = {
@@ -51,16 +43,9 @@ return {
 			end,
 		},
 		sources = {
-			default = { "lazydev", "lsp", "path", "luasnip", "buffer" },
-			providers = {
-				lazydev = {
-					name = "LazyDev",
-					module = "lazydev.integrations.blink",
-					-- make lazydev completions top priority (see `:h blink.cmp`)
-					score_offset = 100,
-				},
-			},
+			default = { "lsp", "path", "luasnip", "buffer" },
 		},
 		signature = { enabled = true, window = { border = "rounded" } },
 	},
+	opts_extend = { "sources.default" },
 }
