@@ -4,7 +4,8 @@ local M = {
 	dependencies = {
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
-		{ "saghen/blink.cmp" },
+		-- { "saghen/blink.cmp" },
+		{ "hrsh7th/nvim-cmp" },
 		{
 			"j-hui/fidget.nvim",
 			opts = {},
@@ -48,8 +49,8 @@ end
 function M.config()
 	local lspconfig = require("lspconfig")
 	local mason_lspconfig = require("mason-lspconfig")
-	local capabilities = require("blink.cmp").get_lsp_capabilities()
-
+	-- local capabilities = require("blink.cmp").get_lsp_capabilities()
+	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 	-- Diagnostics symbols for display in the sign column.
 	local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 	for type, icon in pairs(signs) do

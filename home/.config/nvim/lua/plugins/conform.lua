@@ -4,12 +4,10 @@ return {
 	cmd = { "ConformInfo" },
 	keys = {
 		{
-			-- Customize or remove this keymap to your liking
 			"<leader>fm",
 			function()
 				require("conform").format({ async = true })
 			end,
-			mode = "",
 			desc = "Format buffer",
 		},
 	},
@@ -35,7 +33,12 @@ return {
 				if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
 					return
 				end
-				return { timeout_ms = 500, lsp_format = "fallback" }
+				-- return { timeout_ms = 500, lsp_format = "fallback" }
+				return {
+					lsp_fallback = true,
+					async = false,
+					timeout_ms = 1000,
+				}
 			end,
 		})
 		vim.api.nvim_create_user_command("FormatDisable", function(args)
