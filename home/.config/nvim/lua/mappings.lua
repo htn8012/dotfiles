@@ -7,7 +7,7 @@ vim.keymap.set({ "n", "x" }, "H", "^")
 vim.keymap.set({ "n", "x" }, "L", "g_")
 
 -- better
-vim.keymap.set({ "n", "v", "i" }, "<C-S>", ":w<cr>", { silent = true, desc = "save" })
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 vim.keymap.set("n", "<leader>q", ":q<cr>", { desc = "quit" })
 vim.keymap.set("n", "<esc><esc>", ":nohlsearch<cr>", { silent = true })
 
