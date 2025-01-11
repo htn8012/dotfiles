@@ -7,9 +7,9 @@ vim.keymap.set({ "n", "x" }, "H", "^")
 vim.keymap.set({ "n", "x" }, "L", "g_")
 
 -- better
-vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
-vim.keymap.set("n", "<leader>q", ":q<cr>", { desc = "quit" })
-vim.keymap.set("n", "<esc><esc>", ":nohlsearch<cr>", { silent = true })
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+vim.keymap.set("n", "<leader>q", ":q<cr>", { desc = "Quit" })
+vim.keymap.set("n", "<esc>", ":nohlsearch<cr>", { silent = true })
 
 -- keep matches center screen when cycling with n|n
 vim.keymap.set("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "next search result" })
