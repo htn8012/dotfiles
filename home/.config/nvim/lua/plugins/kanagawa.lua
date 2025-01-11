@@ -37,8 +37,8 @@ return {
         NormalFloat = { bg = "none" },
         FloatBorder = { bg = "none" },
         FloatTitle = { bg = "none" },
-        StatusLine = { fg = theme.syn.comment, bg = "none" },
-        StatusLineNC = { fg = theme.syn.comment, bg = "none" },
+        -- StatusLine = { fg = theme.syn.comment, bg = "none" },
+        -- StatusLineNC = { fg = theme.syn.comment, bg = "none" },
 
         AvanteTitle = { fg = theme.syn.comment, bg = "none" },
         AvanteSubtitle = { fg = theme.ui.fg_dim, bg = "none" },

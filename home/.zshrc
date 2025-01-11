@@ -111,3 +111,10 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Created by `pipx` on 2024-12-01 05:30:41
 export PATH="$PATH:/home/htn/.local/bin"
+
+colors () {
+    for i in {0..255}
+    do
+        print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}
+    done
+}
