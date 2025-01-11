@@ -7,7 +7,7 @@ return {
   },
   cmd = "Neotree",
   keys = {
-    { "<leader>e", ":Neotree left reveal<CR>", silent = true, desc = "neo-tree float" },
+    { "<leader>fe", ":Neotree left reveal<CR>", silent = true, desc = "neo-tree float" },
   },
   deactivate = function()
     vim.cmd([[Neotree close]])
@@ -40,9 +40,19 @@ return {
       bind_to_cwd = false,
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
+      components = {
+        name = function(config, node, state)
+          local name = require('neo-tree.sources.common.components').name(config, node, state)
+          if node:get_depth() == 1 then
+            name.text = vim.fs.basename(vim.loop.cwd() or '')
+          end
+          return name
+        end,
+      },
     },
     window = {
       popup = { title = "" },
+      width = 35,
       mappings = {
         ["l"] = "open",
         ["h"] = "close_node",
