@@ -43,3 +43,5 @@ vim.keymap.set("n", "<leader>C", '"_C', { desc = "change until eol without yanki
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "yank to clipboard" })
 vim.keymap.set("n", "<leader>p", '"+p', { desc = "paste after cursor from clipboard" })
 vim.keymap.set("n", "<leader>P", '"+P', { desc = "paste before cursor from clipboard" })
+
+vim.keymap.set({ "n", "v" }, "<C-a>", "<nop>")

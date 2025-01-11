@@ -5,9 +5,10 @@ local colors = {
 	cyan = "#6A9589",
 	red = "#C34043",
 	violet = "#938aa9",
-	grey = "#363636",
+	grey = "#3a3a3a",
 	green = "#76946A",
 	yellow = "#C0A36E",
+	orange = "#FFA066",
 }
 
 local kanagawa_theme = {
@@ -25,7 +26,7 @@ local kanagawa_theme = {
 		z = { fg = colors.foreground, bg = colors.grey },
 	},
 	visual = {
-		a = { fg = colors.background, bg = colors.blue },
+		a = { fg = colors.background, bg = colors.orange },
 		z = { fg = colors.foreground, bg = colors.grey },
 	},
 	replace = {
