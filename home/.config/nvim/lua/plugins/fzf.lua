@@ -16,18 +16,11 @@ return {
 			or nil
 		local fzflua = {
 			fzf_colors = {
+				true,
 				["fg"] = { "fg", "CursorLine" },
-				["bg"] = { "bg", "Normal" },
-				["hl"] = { "fg", "Comment" },
 				["fg+"] = { "fg", "Normal" },
+				["bg"] = { "bg", "Normal" },
 				["bg+"] = { "bg", { "CursorLine", "Normal" } },
-				["hl+"] = { "fg", "Statement" },
-				["info"] = { "fg", "PreProc" },
-				["prompt"] = { "fg", "Conditional" },
-				["pointer"] = { "fg", "Exception" },
-				["marker"] = { "fg", "Keyword" },
-				["spinner"] = { "fg", "Label" },
-				["header"] = { "fg", "Comment" },
 				["gutter"] = "-1",
 			},
 			keymap = {

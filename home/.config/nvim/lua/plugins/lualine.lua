@@ -1,46 +1,36 @@
-local colors = {
-	-- background = "#1a1a1a", --wave
-	background = "#121212", --dragon
-	foreground = "#747474",
-	blue = "#7E9CD8",
-	red = "#C34043",
-	violet = "#938aa9",
-	green = "#76946A",
-	orange = "#FFA066",
-}
-
-local kanagawa_theme = {
-	normal = {
-		a = { fg = colors.background, bg = colors.violet },
-		b = { fg = colors.foreground, bg = colors.background },
-		c = { fg = colors.foreground, bg = colors.background },
-		z = { fg = colors.foreground, bg = colors.background },
-	},
-
-	insert = {
-		a = { fg = colors.background, bg = colors.green },
-		z = { fg = colors.foreground, bg = colors.background },
-	},
-	visual = {
-		a = { fg = colors.background, bg = colors.orange },
-
-		z = { fg = colors.foreground, bg = colors.background },
-	},
-	replace = {
-		a = { fg = colors.background, bg = colors.red },
-		z = { fg = colors.foreground, bg = colors.background },
-	},
-
-	inactive = {
-		a = { fg = colors.foreground, bg = colors.background },
-		b = { fg = colors.foreground, bg = colors.background },
-		c = { fg = colors.background, bg = colors.background },
-	},
-}
 return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "echasnovski/mini.icons" },
 	config = function()
+		local colors = require("kanagawa.colors").setup()
+		local colors_theme = colors.theme
+		local kanagawa_theme = {
+			normal = {
+				a = { fg = colors_theme.ui.bg_dim, bg = colors_theme.syn.statement },
+				b = { fg = colors_theme.ui.fg_dim, bg = "none" },
+				c = { fg = colors_theme.ui.fg_dim, bg = "none" },
+				z = { fg = colors_theme.ui.fg_dim, bg = "none" },
+			},
+
+			insert = {
+				a = { fg = colors_theme.ui.bg, bg = colors_theme.syn.string },
+				z = { fg = colors_theme.ui.fg_dim, bg = "none" },
+			},
+			visual = {
+				a = { fg = colors_theme.ui.bg, bg = colors_theme.syn.constant },
+				z = { fg = colors_theme.ui.fg_dim, bg = "none" },
+			},
+			replace = {
+				a = { fg = colors_theme.ui.bg, bg = colors_theme.syn.special2 },
+				z = { fg = colors_theme.ui.fg_dim, bg = "none" },
+			},
+
+			inactive = {
+				a = { fg = colors_theme.ui.fg_dim, bg = colors_theme.ui.bg },
+				b = { fg = colors_theme.ui.fg_dim, bg = colors_theme.ui.bg },
+				c = { fg = colors_theme.ui.fg_dim, bg = colors_theme.ui.bg },
+			},
+		}
 		require("lualine").setup({
 			options = {
 				component_separators = { left = "", right = "" },
