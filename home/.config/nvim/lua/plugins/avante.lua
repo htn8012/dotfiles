@@ -14,6 +14,14 @@ return {
 	end,
 	event = "VeryLazy",
 	lazy = false,
+	build = ":AvanteBuild source=false",
+	dependencies = {
+		"stevearc/dressing.nvim",
+		"nvim-lua/plenary.nvim",
+		"MunifTanjim/nui.nvim",
+		"echasnovski/mini.icons",
+		"zbirenbaum/copilot.lua",
+	},
 	opts = {
 		provider = "copilot",
 		windows = {
@@ -29,13 +37,5 @@ return {
 				start_insert = false,
 			},
 		},
-	},
-	build = ":AvanteBuild source=false",
-	dependencies = {
-		"stevearc/dressing.nvim",
-		"nvim-lua/plenary.nvim",
-		"MunifTanjim/nui.nvim",
-		"echasnovski/mini.icons",
-		"zbirenbaum/copilot.lua",
 	},
 }

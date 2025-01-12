@@ -1,3 +1,3 @@
 {
-  "diagnostics.disable": ["missing-fields", "undefined-global"]
+  "diagnostics.disable": ["missing-fields"]
 }

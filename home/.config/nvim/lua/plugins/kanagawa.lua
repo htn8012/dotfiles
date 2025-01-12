@@ -43,7 +43,7 @@ return {
 				WinSeparator = { fg = theme.ui.float.fg_border },
 				NeoTreeRootName = { fg = theme.syn.comment },
 
-				LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+				LazyNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
 				MasonNormal = { fg = theme.ui.fg_dim, bg = "none" },
 
 				Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency

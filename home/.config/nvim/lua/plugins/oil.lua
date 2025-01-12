@@ -1,5 +1,6 @@
 return {
 	"stevearc/oil.nvim",
+	dependencies = { { "echasnovski/mini.icons", opts = {} } },
 	lazy = false,
 	keys = {
 		{ "<leader>n", "<cmd>Oil<cr>", desc = "oil" },

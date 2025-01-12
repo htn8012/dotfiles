@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = { "echasnovski/mini.icons" },
+	dependencies = { { "echasnovski/mini.icons", opts = {} } },
 	config = function()
 		local colors = require("kanagawa.colors").setup()
 		local colors_theme = colors.theme
@@ -26,9 +26,9 @@ return {
 			},
 
 			inactive = {
-				a = { fg = colors_theme.ui.fg_dim, bg = colors_theme.ui.bg },
-				b = { fg = colors_theme.ui.fg_dim, bg = colors_theme.ui.bg },
-				c = { fg = colors_theme.ui.fg_dim, bg = colors_theme.ui.bg },
+				a = { fg = colors_theme.ui.fg_dim, bg = "none" },
+				b = { fg = colors_theme.ui.fg_dim, bg = "none" },
+				c = { fg = colors_theme.ui.fg_dim, bg = "none" },
 			},
 		}
 		require("lualine").setup({
