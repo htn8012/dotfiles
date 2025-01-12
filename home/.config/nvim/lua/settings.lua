@@ -33,24 +33,24 @@ vim.opt.sidescrolloff = 12
 
 -- check if we need to reload the file when it changed
 vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
-  group = vim.api.nvim_create_augroup("Checktime", { clear = true }),
-  callback = function()
-    if vim.o.buftype ~= "nofile" then
-      vim.cmd("checktime")
-    end
-  end,
+	group = vim.api.nvim_create_augroup("Checktime", { clear = true }),
+	callback = function()
+		if vim.o.buftype ~= "nofile" then
+			vim.cmd("checktime")
+		end
+	end,
 })
 
 -- highlight briefly on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
-  group = vim.api.nvim_create_augroup("highlight_on_yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank({
-      higroup = "PmenuKindSel",
-      timeout = 150,
-      on_macro = true,
-    })
-  end,
+	group = vim.api.nvim_create_augroup("highlight_on_yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "PmenuKindSel",
+			timeout = 150,
+			on_macro = true,
+		})
+	end,
 })
 
 -- automatic toggling
@@ -63,11 +63,11 @@ vim.cmd([[
 ]])
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "*",
-  callback = function()
-    -- Disable comment on new line
-    vim.opt.formatoptions:remove { "c", "r", "o" }
-  end,
-  group = vim.api.nvim_create_augroup("General", { clear = true }),
-  desc = "Disable New Line Comment",
+	pattern = "*",
+	callback = function()
+		-- Disable comment on new line
+		vim.opt.formatoptions:remove({ "c", "r", "o" })
+	end,
+	group = vim.api.nvim_create_augroup("General", { clear = true }),
+	desc = "Disable New Line Comment",
 })

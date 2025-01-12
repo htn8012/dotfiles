@@ -8,21 +8,21 @@ local M = {
 		-- { "saghen/blink.cmp" },
 		{ "hrsh7th/nvim-cmp" },
 		{
+			"folke/lazydev.nvim",
+			ft = "lua", -- only load on lua files
+			opts = {
+				library = {
+					{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+				},
+			},
+		},
+		{
 			"j-hui/fidget.nvim",
 			opts = {
 				notification = {
 					window = {
 						winblend = 0, -- Background color opacity in the notification window
 					},
-				},
-			},
-		},
-		{
-			"folke/lazydev.nvim",
-			ft = "lua", -- only load on lua files
-			opts = {
-				library = {
-					{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 				},
 			},
 		},

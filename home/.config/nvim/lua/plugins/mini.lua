@@ -20,4 +20,11 @@ return {
 			MiniIcons.mock_nvim_web_devicons()
 		end,
 	},
+	{
+		"echasnovski/mini.comment",
+		version = "*",
+		config = function()
+			require("mini.comment").setup()
+		end,
+	},
 }
