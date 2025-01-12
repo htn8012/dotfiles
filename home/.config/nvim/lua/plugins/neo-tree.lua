@@ -5,6 +5,7 @@ return {
 		"echasnovski/mini.icons",
 		"MunifTanjim/nui.nvim",
 	},
+
 	cmd = "Neotree",
 	keys = {
 		{ "<leader>fe", ":Neotree left reveal<CR>", silent = true, desc = "neo-tree float" },
